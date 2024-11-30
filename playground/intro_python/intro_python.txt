@@ -1,0 +1,54 @@
+INSTALLATION OF PYTHON3
+To install Python3 in your UBUNTU OS via terminal.
+	TYPE --> sudo apt-get install python3 -y
+
+		INSTALLATION OF BINARY UTILITIES
+Binary utilities are combination of assembler and
+linker. Most times, BINARY UTILITIES is installed
+by default in UBUNTU OS, but if not installed, then
+install it using this command in the terminal.
+
+	TYPE --> sudo apt-get install binutils
+
+binutils installs two programs called (as) and (ld)
+as means (gnu assembler), ld means (linker). This
+are lowlevel programs.
+
+		INSTALLATION OF GCC
+GCC is a C language compiler that compiles your
+converted python code from C into assembler.
+If GCC is not installed by default, then install
+using this command in your terminal.
+
+	TYPE --> sudo apt-get install gcc -y
+
+		INSTALLTION OF VIRTUALENV
+Virtual Environment is a command line program that
+allows us to create an isolated user-space memory.
+If Virtual Environment is not installed by default,
+then install using this command in your terminal.
+
+	TYPE --> sudo apt-get install virtualenv -y
+
+		INATALLTION OF TOR BROWSER
+TOR Browser is an Onions browser that gives us
+privacy over the internet. TOR can be used to
+access both first internet layer, second internet
+layer, and thrid internet layer.
+First Layer: normal browser site we vist regulary
+Second Layer: known as deep web.
+Third Layer: known as dark web.
+
+If TOR is not installed by default, then install
+TOR using this command in the terminal.
+
+	TYPE --> sudo apt-get install tor torbrowser-launcher
+
+		INSTALLATION OF VIM
+VIM is a terminal based editor used by the intelligence and
+world hackers and programmers.
+If VIM is not installed by default, then install VIM using
+this command in the terminal.
+
+	TYPE -->  sudo apt-get install vim -y 
+

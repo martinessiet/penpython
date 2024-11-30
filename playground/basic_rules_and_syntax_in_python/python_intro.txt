@@ -1,0 +1,44 @@
+WHAT IS PYTHON
+
+Python is one of the numerous computer programming languages that are 
+gaining popularity everyday. Python by definition is a general 
+high-level language that is easy to learn and even easier to use, 
+it's style and philosophy emphasises on code readability and simplicity.
+The syntax makes it easy for programmers to write computer instructions 
+in fewer lines of code compared to the number it would take to write 
+similar instructions in other languages such as JAVA, C++, or C#. 
+
+Python's core philosoply is summarised in the first seven principles that 
+govern the development of the language as written in "The Zen of Python"
+
+They read: 
+	1.	Beautiful is better than ugly.
+	2.	Explicit is better than implicit.
+	3.	Simple is better than complex.
+	4.	Complex is better than complicated.
+	5.	Flat is better than nested.
+	6.	Sparse is better than dense.
+	7.	Readability counts.
+
+
+	THE PYTHON SHELL
+
+When you install python, you will have the option to run python script saved
+as .py files right from your computer terminal, or you can use the simpler 
+Python IDLE integrated development environment. 
+
+
+	EXECUTING PYTHON SCRIPT
+
+Python scripts have an extention of ".py". When saving your code, be sure to 
+specify this, .py, in the filename. It is preferrable that you save your 
+excercise scripts with a simple descriptive name with no spaces, example 
+"Helloworld.py" and so on. Proper naming of your scripts file eliminates 
+chances of errors and confusion when calling them from the terminal.
+
+To run the saved .py scripts e.g."helloworld.py", you will need to know a
+few things about navigating terminal. You should know how to change directories (you must always be on the working directory in which the python scripts are 
+saved). To run python script example:
+		Python Helloworld.py
+
+

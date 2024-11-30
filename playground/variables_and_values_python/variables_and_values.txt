@@ -1,0 +1,63 @@
+VARIABLES AND VALUES
+
+	VARIABLES AND ASSIGNMENTS
+
+You were taught in basic algebra that a variable represents a number. The same applies in Python, 
+except that a variable can also represent other values besides numbers, which can be integer
+or float (we will look at this briefly), we took a variable "name" and assign it a value "ubon".
+We take another variable "x" and assign it a value "10".
+
+Variable assignment
+
+x = 10
+print(x)
+
+The statement "x = 10" is what is called an assignment statement. Assignment is associating a 
+value to a variable. In Python, the key to assigning statement is the use of an ASSIGNMENT OPERATOR
+which is the symbol "=", as you know from maths, the equal sign.
+
+To put it in another way, the statement "x = 10" binds a variable we named "x" to the value "10".
+In this case, "x" is a type "INT" because it is bound to a value of interger type.
+
+You can assign and reassign a variable as often as you wish. The variable type will change when you 
+reassign it an expression of a different type.
+
+The print statement displays the assigned value of variable "x". Reassigning the variable a different
+value to the variable will evident after printing it.
+
+Multiple Variable Assignment
+
+x = 10
+print(x)
+x = 'apple'
+print(x)
+
+When you run this script/program, here is what you should see:
+
+10
+apple
+
+Assigning Multiple Variables Same Value
+
+You can assign a single value to several variable simultenously in Python.
+Consider this example:
+
+x = y = z = 10
+print(x)
+print(y)
+print(z)
+
+When you run the script above, you will notice that the value of variables x, y, and z are all 10.
+This is because an interger object with the value 10 is created and all the variables are assigned 
+to its memory location.
+
+You can also assign multiple variables multiple values in one line of code.
+This is best illustrated in the example below.
+
+Assigning Multiple Variable Different Values
+
+name, age, occupation = 'ubon\n', 10, '\npython programmer'
+print(name + age + occupation)
+
+Three object "ubon", 10, "python programmer" are assigned to variables name, age, occupation respectively.
+

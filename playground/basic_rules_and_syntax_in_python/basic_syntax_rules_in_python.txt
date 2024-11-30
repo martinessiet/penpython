@@ -1,0 +1,128 @@
+BASIC SYNTAX RULES IN PYTHON
+
+Before we can delve further into learning to write code in Python,
+there are a few universal python syntax rules you must grasp first. 
+In this section, we will cover the most basic rules you need to get started
+with your very first real python program. We will learn more rules and 
+best practice as we journey together. 
+
+	PYTHON IDENTIFIERS
+
+An identifier is a name used to identify an object such as a variable,
+module, class, or function. In the python language, an identifier must begin
+with an alphabetic letter in upper case (A to Z), lower case (a to z) or 
+an underscore (_) followed by more letters, underscore, or numeric digits.
+Python does not allow the use of punctuation characters such as "%", "/", 
+"$", or "@" within the identifire name.
+
+It is also important to note that python is a case sensitive language. This
+means an identifier "age" is not the same as "Age".
+
+	RESERVED WORDS or KEYWORDS
+
+There are a number of words written in lowercase letters that are reserved 
+and cannot be used as constants, variables, or variables identifier.
+Here is a table of these words:
+
+and		assert		break		class		continue
+def		del		elif		else		except
+exec		finally		for		from		global
+if		import		in		is		lambda
+not		or		pass		raise		return
+try		while		with		yield		type
+case		mash		-		await		async
+nonlocal	true		pause		false
+
+
+	LINES and INDENTATION
+
+Unlike most object-oriented programming languages, python does not 
+make use of curly braces ("{", "}") to group lines of code into
+blocks to define functions, class, and flow control structures. 
+Instead, line indentations are used to denote block of code.
+The rule of indentation is rigidly enforced.
+
+The number of spaces in the indentation may vary, but all statements 
+within one block must have matching indentation spaces, typically 
+four spaces, or one tab per indent level.
+
+	MULTI-LINE STATEMENTS
+
+Typically, statements in python ends with a new line. However, the line 
+continuation character (\) can be used to denote that the line does not 
+end but instead continues in the next.
+Consider this example:
+
+Total_cost = item1_price + \
+	item2_price + \
+	item3_price 	
+
+Multi-Line statements contain within brackets (), square brackets [], 
+or curly braces {} do not need the line continuation character.
+
+Workdays = ["monday", "tuesday", "wednesday", "thursday", "friday", 
+	    "saturday"]
+
+
+	STRING QUOTATION CHARACTERS
+
+Single ('), double ("), and triple (''' or """) quotation marks
+are used to denote string literals in python. A quotation must
+start and end with the same type of quote mark. Triple quotation
+marks denote things that may span multiple lines.
+
+Example: 
+
+name = 'ubon'
+
+occupation = "python programmer"
+
+country = '''ubon is a python programmer, he 
+is currently based in UK.'''
+
+origin = """ubon is a python programmer, he
+is country of origin is Nigeria."""
+
+print(name)
+print(occupation)
+print(country)
+print(origin)
+
+
+	COMMENTS IN PYTHON
+
+Comments in your program code are lines of text that the
+interpreter ignores because they are written for humans
+to understand what a particular section of the code does.
+Comments in Python start with the hash sign (#). Anything
+that comes after this will be ignored by the Python interpreter.
+
+Example:
+
+#This is a comment. It will be ignored by the interpreter
+
+print('Hello World') #This is another comment.
+
+To write comment spanning multiple lines, you must start 
+each line with the hash symbol (#).
+
+Example:
+
+#name is a variable
+#that accepts the data type of 
+#character
+name = 'Ubon' #this variable called name 
+	      #holds the string ubon
+
+	
+	MULTIPLE STATEMENTS ON A SINGLE LINE
+
+You can seperate multiple lines written on a single line using a 
+semi-colon (;). This rule only applies when neither of the statements
+on the line starts a new block of code. Such a line will look like 
+this
+
+Example:
+
+name = 'ubon'; age = 19; occupation = 'python programmer'
+
