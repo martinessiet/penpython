@@ -1,0 +1,360 @@
+			PYTHON DATA TYPES
+
+In Python, just as in any other Object Oriented Programming language, every  value has a data type.
+Everything in Python is an object and data type are considered classes while variables are the instance
+or objects of these classes.
+
+The funtion type() is used to determine which class a particular value or variable belongs to
+and the isinstance() fuction is used to check whether an object belongs to a specific class.
+In this section, we are going to look at the most important data types and how to use them
+in basic programming.
+
+	Numbers
+
+Interger, Floating Point, and Complex, define as int, float, complex respectively, are the three
+classification of numbers in Python. The number as a data type stores numeric values and is 
+immutable, and meaning that when the value of the variable is changed, a new object is allocated.
+
+Creating Number Objects
+
+Number object (variables) are created when they are assigned values. In the following exercises,
+we will create three objects x, y, and z, when we assign them values. 
+
+example: 1
+
+x = 7
+
+print(x, 'is of type ', type(x))
+
+y = 7.0
+
+print(y, 'is of type ', type(y))
+
+z =  1 + 2j
+
+print("z", z, "a complex number?", isinstance(1+2j, complex))
+
+Now unlike in other OOP languages where the length of an integer is limited, 
+in Python, an integer can be of any length and is not limited by the available
+memory in which it is stored.
+
+A float, on the other hand, is accurate up to 15 decimal places. The difference between an
+interger and a float is a decimal point. For instance the code above, 7 is an integer, while
+7.0 is a floating point number. 
+
+Complex numbers in Python are written in the format x + yj where x is the real part of the number 
+and y is the imaginary part. While it is good to know about them, complex numbers are not used much when 
+programmig in Python.
+
+
+Deleting Number Objects
+
+Reference to a number object can be deleted (removed from memory) using the statement 'del'.
+The syntax of the del statement look like this: 
+
+x, y, z = 7, 8, 10
+
+del x, y, z           0  0  0  0  0  0  0  0                  8 bits is 1 byte of memory, my pc (cpu can only access 8 bits space) ram is 8 bits
+x = 7                 0  0  0  0  0  1  1  1		      this is 7 in memory which means x, x is just an identifier that represents 7
+
+Rough calculation:
+
+x = 100
+
+	2 	100	0
+	2	50	0
+	2	25	1
+	2	12	0
+	2	6	0
+	2	3	1
+	2	1	0	 128 64 32 16 8 4 2 1
+	2	0	0	= 0  1  1  0  0 1 0 0
+
+
+
+                      
+
+you can delete a single object in one instance or multiple objects as in our example above.
+
+
+Number Type Conversion
+
+It is possible to convert numbers from one type to another in Python in a process that is 
+also referred to as coercion. Operations such as multiplication, addition, subtraction, 
+and division coerce integer numbers into floating point numbers implicitly if one of the 
+operand is a float.
+
+example: 2 + 1.0
+= 3.0
+
+In this example, an integer 2 added to a float 1.0 gives the result as a float.
+To explicitly convert one number type to another we use built in functions int(),
+float(), complex() to coerce numbers to intergers, float, and complex types 
+respectively. These function can also convert strings with numeric values to the specified 
+number types. 
+
+x, y, z = 5.7, 10, "3.5j"
+
+print(x, 'is of type ', type(x), y, 'is of type ', type(y), 'and', z, 'is a ', type(z))
+
+x = int(x); y = float(y); z = complex(z)
+
+print("after coercion, x new value is ", x, "y new value is ", y, "and z is of type ", type(z))
+
+as you can see the exercise above, when a number is converted from a float to an interger, the number 
+5.7 is truncated to 5 and not rounded off (otherwise it would be 6). 
+
+Mathematical Functions
+
+Python has built in function that can be used the perform mathematical calculations. Table 
+below summarises the descritpion of each of the most common functions
+
+		FUNCTION		DESCRIPTION
+		
+		abs(x)			Returns the absolute value of x
+
+		ceil(x)			Returns the ceiling of x, (the smallest interger that
+					is not less than x)
+
+		cmp(x, y)		If x < y, it returns -1, if x == y it returns 0,
+					and if x > y, it returns 1
+
+		exp(x)			Returns the exponential of x
+
+		fabs(x)			Returns the absolute value of x
+
+		floor(x)		Returns the floor value of x (the largest integer that is not greater
+					than x)
+
+		log(x)			Returns the natural logrithm of x when x > 0
+
+		log10(x)		Returns the base -10 logrithm of x when x > 0
+
+		max(x1, x2, ...)	Returns the highest value of the arguments
+
+		min(x1, x2, ...)	Returns the lowest value of the arguments
+
+		modf(x)			Returns the fractional and integer parts of x as a tuple
+
+		pow(x, y)		Returns the value of x ** y
+
+		round(x, [n])		Returns the value of x rounded to n digits from the decimal 
+					point
+
+		sqrt(x)			Returns the square root of x when x > 0
+
+	    
+
+  
+
+
+
+		STRING DATA TYPE
+
+
+
+A string is a sequence of character encolsed in single ('), double ("), or triple (''' or """) quotes.
+It is among the most popular data types in python. A string is created by simply enclosing unicode (alphanumeric and symbol) characters
+in quotes and assigning them to a variable. In python, unlike most other OOP languages, single quotes are treated the same as double quotes.
+
+
+greeting = 'Hello'
+
+name = 'Tiger'
+
+message = '''This message is to show that you can have a multiline string when you use triple quote.
+		Quotation mark can be single or double depending on your preference.'''
+
+print(greeting, name, message)
+
+Stings are imutable data types. 
+
+
+	ACCESSING VALUES IN A STRING
+Because python does not support a character type, each alphanumeric or symbol character in a string is considered a substring of length one. 
+We can use the slicing operator (square bracket, []) to access the substring and use an index that begins with zero for the first substring
+to manipulate them.
+
+	UPDATING STRINGS
+The value in a string can be updated by reassiging the variable to another sting. The value of the new string may or may not be related to 
+the previous value
+
+Example:
+
+greeting = 'Hello World'
+
+print(greeting)
+
+greeting_ub = greeting[:6] + 'ubon'
+
+print('Updated string = ', greeting_up)
+
+
+What this example above does is to "update" the string begining at index 5 with the new string of character
+
+
+	CONCATENATING TWO OR MORE STRINGS
+
+Concatenating is joining two or more strings to make them one. In python, we use the plus (+) operator to achieve this.
+You can use parentheses to concatenate strings in different lines and you can iterate a string using the asterics operator (*)
+as demonstrated in the example below:
+
+Example:
+
+greeting = 'hello'
+
+name_1 = 'Ekene'
+
+name_2 = 'Ndioziri'
+
+message = ("It's me", "again")
+
+print(greeting + ' ' + name_1)
+print(greeting, name_2)
+print(greeting * 3, message)
+
+The table below is a summary of the special string operators that you can use to manipulate and update substrings in a string, 
+some of which we have already used in our example above.
+
+
+			OPERATOR			WHAT IT DOES
+
+			+ (concatenation)		Combines values on either side of the operator.
+			
+			* (iteration)			Concatenates multiple copies of a string to create new strings.
+
+			[] (slice)			Returns the character index from the given index
+			
+			[:] (range slice)		Returns the substring characters from the given range.
+
+			in (membership)			Returns true if a character exist in a specified string.
+
+			not in (membership)		Returns true if a character does not exist in the specified string.
+
+			r/R (raw string)		Supress escape character. The letter "r" or "R" preceeded the first quotation marks.
+
+			% (format)			Performs string formating.
+
+	
+	ESCAPE CHARACTERS
+If you use a single or double quote to print a text like "He asked, "what's that doing here?" You will get a SyntaxError: invalid syntax.
+Run the following line of code
+
+print("he asked, "what's that doing here?"")
+print("he asked,", "what's that doing here?") #ubon own
+print('he asked, "what's that doing here?"') #ekene own
+
+ 
+Here is a table summarising escape (or non printable) characters that can be used with a backslash '\' notatation
+
+		BACKSLASH		DESCRIPTION
+
+		\a			Bell or alert
+		\b			Backspace
+		\cx			Control x
+		\C-x			Control x
+		\e			Escape
+		\f			Formfeed
+		\M-\C-x			Meta-control x
+		\n			Newline
+		\nnn			Octal notation where n is in the range 0.7
+		\r			Carriage return
+		\s			Space
+		\t			Tab
+		\v			Vertical tab
+		\x			Character x
+		\xnn			Hexadecimal notation
+
+
+	STRING FORMATTING WITH %
+The format operator (%) is one of the best features in Python that is unique to strings. There is no better way to demonstrate how it works
+than in an example.
+
+Example:
+	
+	print('my name is %s and I am %d years old!'%('Martin, 30'))
+
+In this example, we formatted the string using a string placeholder %s and a decimal integer placeholder %d. 
+
+Here is a table of all the symbols that can be used alongside % to format placeholder as used in example above.
+
+		FORMAT SYMBOL		CONVERSION
+		
+		%c			Character
+		%d			Signed decimal integer
+		%i 			Signed decimal integer
+		%u			Unsigned decimal interger
+		%f			Floating point real number
+		%s			String conversion using str() before formatting
+		%e			Exponential notation (with lowercase 'e')
+		%E			Exponential notation (with uppercase 'E')
+		%x			Hexadecimal integer (lowercase letter)
+		%X			Hexadecimal integer (uppercase letter)
+		%g			The shorter of %f and %e
+		%G			The shorter of %f and %E
+		%o			Octa integer
+		
+Other symbols are functions supported by python used to format strings are:
+
+		SYMBOL			FUNCTIONALITY
+		+			Displays the sign
+		-			Left justification
+		0			Pad from left with zero (in place of spaces)
+		*			Argument specifies width or precision
+		%			'%%' format with a single literal '%'
+		<sp>			Insert a blank space before a positive number
+		(var)			Mapping variables (dictionary argument)
+		#			Adds the octal leading zero ('0') or hexadecimal leading '0x' or '0X', when 'x' or 'X' is used.
+		m.n			If applicable M is the minimum total width and n is the number of digits to display after the decimal point.
+
+
+		STRING FORMATTING WITH format()	
+
+A newer method of formating string is the use of the format() method. This method is both powerful and very versatile 
+and is used with curly braces {} as placeholders for the fields or elements to be replaced. 
+Positional arguments can be used to specify the order. 
+
+# Using default order
+
+student_1 = '{}, {} and {}'.format('martin', 'essiet', 'ubon')
+print('\nStudent by default order')
+print(student_1)
+
+# Using positional argument
+
+student_2 = '{1}, {0} and {2}'.format('martin', 'essiet', 'ubon')
+print('\nStudent by positional order')
+print(student_2)
+
+# Using keywords argument
+
+student_3 = '{u}, {m} and {e}'.format(m='martin', u='ubon', e='essiet')
+print('\nStudent by keyword order')
+print(student_3)
+
+
+The format() method also has optional formatting specification. They can be seperated from the field name using a colon ':', < operator can be used to justify
+the string to the left, ^ to the center, and > to the right within a given space. It can also be used to format integers as hexadecimal or binary etc.
+And floating point number can be formatted to round off or display in exponent format.
+
+		OTHER COMMON STRING METHODS
+
+There are many built-in methods that can be used with string type of data in Python besides format(). Other common methods includes
+upper() and lower(), find(), replace(), and split() just to name the most popular.
+
+Example:
+
+print('Hello World'.lower())
+print('Hello World'.upper())
+print('.split() splits words into a list'.split())
+print(['and', 'john', 'joins', 'a', 'list', 'into', 'a', 'string'])
+print('you can use .find() to search for characters in a string'.find('search'))
+print('.replace		will		replace		a	substring	with 	another'.replace("replace", "sustitute"))
+
+
+
+Assignment
+
+Write a program to replace each word in a string
+
+:  
