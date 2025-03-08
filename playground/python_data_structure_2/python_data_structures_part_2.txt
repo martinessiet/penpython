@@ -1,0 +1,407 @@
+Python sets are an unordered collection of unique elements. 
+They are used to store multiple items in a single variable. 
+Sets are mutable, meaning they can be modified after creation.
+
+Creating a Set
+You can create a set in Python using the set() function or the {} syntax:
+
+
+Using the set() function
+my_set = set([1, 2, 3, 4, 5])
+print(my_set)  # Output: {1, 2, 3, 4, 5}
+
+Using the {} syntax
+my_set = {1, 2, 3, 4, 5}
+print(my_set)  # Output: {1, 2, 3, 4, 5}
+
+Set Operations
+Python sets support various operations, including:
+
+Union
+The union of two sets is a set containing all elements from both sets.
+
+
+set1 = {1, 2, 3}
+set2 = {3, 4, 5}
+print(set1.union(set2))  # Output: {1, 2, 3, 4, 5}
+print(set1 | set2)  # Output: {1, 2, 3, 4, 5}
+
+
+Intersection
+The intersection of two sets is a set containing all elements common to both sets.
+
+
+set1 = {1, 2, 3}
+set2 = {3, 4, 5}
+print(set1.intersection(set2))  # Output: {3}
+print(set1 & set2)  # Output: {3}
+
+
+Difference
+The difference of two sets is a set containing all elements in the first set but not in the second set.
+
+
+set1 = {1, 2, 3}
+set2 = {3, 4, 5}
+print(set1.difference(set2))  # Output: {1, 2}
+print(set1 - set2)  # Output: {1, 2}
+
+Symmetric Difference
+The symmetric difference of two sets is a set containing all elements in either set but not in both.
+
+
+set1 = {1, 2, 3}
+set2 = {3, 4, 5}
+print(set1.symmetric_difference(set2))  # Output: {1, 2, 4, 5}
+print(set1 ^ set2)  # Output: {1, 2, 4, 5}
+
+Adding and Removing Elements
+You can add elements to a set using the add() method:
+
+
+my_set = {1, 2, 3}
+my_set.add(4)
+print(my_set)  # Output: {1, 2, 3, 4}
+
+
+You can remove elements from a set using the remove() method:
+
+
+my_set = {1, 2, 3}
+my_set.remove(2)
+print(my_set)  # Output: {1, 3}
+
+
+Note that if you try to remove an element that is not in the set, you will get a KeyError.
+
+Checking Membership
+You can check if an element is in a set using the in operator:
+
+
+my_set = {1, 2, 3}
+print(2 in my_set)  # Output: True
+print(4 in my_set)  # Output: False
+
+
+Set Methods
+Here are some common set methods:
+
+			METHODS						DESCRIPTION
+
+			.add(element)					Adds an element to the set.
+
+			.remove(element)				Removes an element from the set.
+
+			.discard(element)				Removes an element from the set if it exists.
+
+			.pop()						Removes and returns an arbitrary element from the set.
+
+			.clear()					Removes all elements from the set.
+
+			.union(set)					Returns a new set containing all elements from both sets.
+
+			.intersection(set)				Returns a new set containing all elements common to both sets.
+
+			.difference(set)				Returns a new set containing all elements in 
+									the first set but not in the second set.
+ 
+			.symmetric_difference(set)			Returns a new set containing all elements in either set but not in both.
+			
+			
+			
+
+Here's a comprehensive guide to implementing a stack data structure in Python:      
+                                           
+			What is a Stack?
+			
+A stack is a linear data structure that follows the Last-In-First-Out (LIFO) principle. 
+This means that the last item added to the stack will be the first one to be removed.
+
+Implementing a Stack in Python
+You can implement a stack in Python using a list. Here's an example:
+
+class Stack:
+    def _init_(self):
+        self.stack = []
+
+    def push(self, item):
+        self.stack.append(item)
+
+    def pop(self):
+        if not self.is_empty():
+            return self.stack.pop()
+        else:
+            raise IndexError("Stack is empty")
+
+    def peek(self): 
+		if not self.is_empty(): 
+			return self.stack[-1] 
+		else:
+            raise IndexError("Stack is empty")
+
+    def is_empty(self): 
+		return len(self.stack) == 0
+		
+    def size(self): 
+		return len(self.stack)                                              
+
+Stack Operations
+Here are the basic operations you can perform on a stack:         
+          
+Push
+Adds an item to the top of the stack.
+
+stack = Stack()
+stack.push(1)
+stack.push(2)  
+stack.push(3)
+
+
+Pop # Removes an item from the top of the stack.                                  
+
+stack = Stack()
+stack.push(1)
+stack.push(2)
+stack.push(3)
+print(stack.pop())  # Output: 3                                                                                                                      
+
+Peek
+Returns the item at the top of the stack without removing it.
+
+stack = Stack()
+stack.push(1)
+stack.push(2)
+stack.push(3)
+print(stack.peek())  # Output: 3
+
+Is Empty # Checks if the stack is empty.
+stack = Stack()
+print(stack.is_empty())  # Output: True
+
+
+Size
+Returns the number of items in the stack.
+
+stack = Stack()
+stack.push(1)
+stack.push(2)
+stack.push(3)
+
+print(stack.size()) # Output:3
+
+
+
+In Python, self is a keyword used to represent the instance of a class. 
+It is a reference to the current instance of the class and is used to access variables and methods that belongs to the class.
+
+When a method is called on an object, Python automatically passes the object as the first argument to the method. 
+This first argument is referred to as self within the method.
+
+Here's an example:
+
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def greet(self):
+        print(f"Hello, my name is {self.name} and I am {self.age} years old.")
+
+p = Person("John", 30)
+p.greet()  # Output: Hello, my name is John and I am 30 years old.
+
+
+In this example, self is used to access the name and age attributes of the Person class.
+
+Here are some key things to know about self:
+
+	1.	self is not a reserved keyword: While self is commonly used as the name for the first argument in a method, 
+		it's not a reserved keyword in Python. You can use any name you like, but self is the convention.
+	2.	self is automatically passed: When you call a method on an object, 
+		Python automatically passes the object as the first argument to the method.
+	3.	self is used to access class attributes: You can use self to access attributes and methods that belong to the class.
+	4.	self is not needed for static methods: If you define a static method using the @staticmethod decorator, 
+		you don't need to include self as an argument.
+
+I hope this helps clarify the role of self in Python! Let me know if you have any more questions.
+
+
+
+In Python, __init__ is a special method that is automatically called when an object of a class is created. 
+It is also known as the constructor method.
+
+The __init__ method is used to initialize the attributes of the class, and it is typically used to set the initial state of the object.
+
+Here's an example:
+
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+p = Person("John", 30)
+print(p.name)  # Output: John
+print(p.age)   # Output: 30
+
+In this example, the __init__ method is used to initialize the name and age attributes of the Person class.
+
+Here are some key things to know about __init__:
+
+	1.	'init' is called automatically: When you create an object of a class, 
+		Python automatically calls the __init__ method.
+	2.	'init' is used to initialize attributes: The __init__ method is used to set 
+		the initial state of the object by initializing its attributes.
+	3.	'init' can take arguments: The __init__ method can take arguments, 
+		which are used to initialize the attributes of the class.
+	4.	'init' must return None: The __init__ method must return None, 
+		which means it should not return any value.
+
+Some best practices to keep in mind when using __init__:
+
+	1.	_Keep __init__ simple_: Try to keep the __init__ method as simple as possible, 
+		and avoid doing any complex computations or operations.
+	2.	Use default values: Consider using default values for attributes 
+		that are not required to be initialized.
+	3.	Validate arguments: Validate the arguments passed to the __init__ method 
+		to ensure they are valid and consistent.
+
+I hope this helps clarify the role of __init__ in Python! Let me know if you have any more questions.
+
+
+
+In Python, __main__ is a special module name that refers to the main module of a Python program. 
+It is the module that is executed when you run a Python script directly 
+(i.e., not when it is imported as a module by another script).
+
+When you run a Python script, Python sets the special variable __name__ to "__main__" in the main module. 
+This allows you to write code that can be executed when the module is run directly, 
+but not when it is imported as a module.
+
+Here's an example:
+
+myscript.py
+
+def my_function():
+    print("Hello, world!")
+
+if __name__ == "__main__":
+    my_function()
+
+In this example, when you run myscript.py directly, Python sets __name__ to "__main__" 
+and executes the code inside the if __name__ == "__main__": block, which calls my_function().
+
+However, if you import myscript as a module in another script, __name__ will be set to "myscript" 
+instead of "__main__", and the code inside the if __name__ == "__main__": block will not be executed.
+
+Here are some key things to know about __main__:
+
+	1.	'main' is the main module: When you run a Python script directly, Python sets __name__ to "__main__" in the main module.
+	2.	'main' is not set when importing: When you import a module, __name__ is set to the name of the module, not "__main__".
+	3.	_Use if __name__ == "__main__": to execute code_: Use this idiom to execute code only when the module is run directly, 
+		not when it is imported as a module.
+
+Some best practices to keep in mind when using __main__:
+
+	1.	_Use if __name__ == "__main__": consistently_: Use this idiom consistently 
+		to ensure that your code is executed correctly.
+	2.	_Keep code inside if __name__ == "__main__": minimal_: Keep the code inside this block minimal 
+		and focused on executing the main logic of your script.
+	3.	_Use __main__ to test modules_: Use __main__ to test modules by executing code only when the module is run directly.
+	
+	
+
+Queues are a fundamental data structure in computer science, and Python provides a 
+built-in module called queue to implement them.
+
+What is a Queue?
+
+A queue is a First-In-First-Out (FIFO) data structure, meaning that the first element added 
+to the queue will be the first one to be removed.
+
+Basic Operations
+
+A queue supports the following basic operations:
+
+	1.	Enqueue: Add an element to the end of the queue.
+	2.	Dequeue: Remove an element from the front of the queue.
+	3.	Peek: Return the element at the front of the queue without removing it.
+	4.	IsEmpty: Check if the queue is empty.
+
+Python Queue Module
+
+The queue module in Python provides a class called Queue that implements a queue data structure.
+
+Here's an example of how to use the Queue class:
+
+import queue
+
+Create a new queue
+q = queue.Queue()
+
+Enqueue elements
+q.put(1)
+q.put(2)
+q.put(3)
+
+Dequeue elements
+print(q.get())  # prints 1
+print(q.get())  # prints 2
+
+Peek at the front element
+print(q.queue[0])  # prints 3
+
+Check if the queue is empty
+print(q.empty())  # prints False
+
+Queue Implementation
+
+If you want to implement a queue from scratch, you can use a linked list or an array to store the elements. 
+Here's an example implementation using a linked list:
+
+class Node:
+    def __init__(self, value):
+        self.value = value
+        self.next = None
+
+class Queue:
+    def __init__(self):
+        self.front = None
+        self.rear = None
+
+    def enqueue(self, value):
+        node = Node(value)
+        if self.rear is None:
+            self.front = node
+            self.rear = node
+        else:
+            self.rear.next = node
+            self.rear = node
+
+    def dequeue(self):
+        if self.front is None:
+            return None
+        value = self.front.value
+        self.front = self.front.next
+        if self.front is None:
+            self.rear = None
+        return value
+
+    def peek(self):
+        if self.front is None:
+            return None
+        return self.front.value
+
+    def is_empty(self):
+        return self.front is None
+
+
+You can use this implementation as follows:
+
+q = Queue()
+q.enqueue(1)
+q.enqueue(2)
+q.enqueue(3)
+
+print(q.dequeue())  # prints 1
+print(q.peek())  # prints 2
+print(q.is_empty())  # prints False
